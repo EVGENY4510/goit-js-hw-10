@@ -14,7 +14,7 @@ function onInput(e) {
   const inputValue = inputEl.value;
   const name = inputValue.trim();
   if (name === '') {
-    countryListEl.innerHTML = '';
+    clearValue();
     return;
   }
 
@@ -24,8 +24,7 @@ function onInput(e) {
 function onResolve(data) {
   const maxLength = 10;
   if (data.length > maxLength) {
-    countryListEl.innerHTML = '';
-    countryInfoEl.innerHTML = '';
+    clearValue();
     Notiflix.Notify.info(
       'Too many matches found. Please enter a more specific name.'
     );
@@ -57,8 +56,7 @@ function onResolve(data) {
   );
 }
 function error() {
-  countryListEl.innerHTML = '';
-  countryInfoEl.innerHTML = '';
+  clearValue();
   Notiflix.Notify.failure('Oops, there is no country with that name');
 }
 function ifOne(params) {
@@ -89,4 +87,8 @@ function ifMani(params) {
     </li>
     <li class="countri-name">${nameCountri}</li>
   </div>`;
+}
+function clearValue() {
+  countryListEl.innerHTML = '';
+  countryInfoEl.innerHTML = '';
 }
