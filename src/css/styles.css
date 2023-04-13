@@ -10,6 +10,10 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  
+}
+li {
+  list-style: none;
 }
 
 #search-box {
@@ -17,4 +21,47 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+  
+}
+.country-list {
+ 
+  padding-left: 0px;
+}
+.countri-list-wrapper {
+  display: flex;
+  align-items: center;
+}
+.countri-name {
+  margin-left: 16px;
+  font-weight: 600;
+  font-size: 30px;
+  color: red;
+  
+}
+.countri-head {
+  display: flex;
+  align-items: center;
+}
+.countri-name-one {
+  margin-left: 8px;
+}
+.card-text {
+  font-weight: 700;
+  font-size: 30px;
+  color:blue
+}
+.card-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding-left: 0px;
+
+}
+.list-span {
+  font-weight: 400;
+  margin-left: 6px;
+  color: black;
+}
+.countri-name-one {
+  color: red;
 }
